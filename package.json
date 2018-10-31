@@ -1,0 +1,31 @@
+{
+  "name": "testing-nuxtjs-like-a-boss",
+  "version": "1.0.0",
+  "description": "🕺 Code to show how we can easily add unit test into our Nuxt project",
+  "author": "Irfan Maulana",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path --fix .gitignore .",
+    "precommit": "npm run lint"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.2.0",
+    "express": "^4.16.4",
+    "@nuxtjs/bulma": "^1.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^4.7.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "3.0.0",
+    "prettier": "1.14.3"
+  }
+}
