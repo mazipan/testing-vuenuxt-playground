@@ -1,8 +1,23 @@
 <template>
   <div>
+    <rwv-header/>
     <nuxt/>
+    <rwv-footer/>
   </div>
 </template>
+
+<script>
+import RwvHeader from '@/components/TheHeader'
+import RwvFooter from '@/components/TheFooter'
+
+export default {
+  name: 'DefaultLayout',
+  components: {
+    RwvHeader,
+    RwvFooter
+  }
+}
+</script>
 
 <style>
 html {

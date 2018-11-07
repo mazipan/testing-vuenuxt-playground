@@ -9,15 +9,20 @@
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path --fix .gitignore .",
+    "lint": "eslint --fix --ext .js,.vue --ignore-path .eslintignore .",
     "precommit": "npm run lint",
     "test": "./node_modules/.bin/jest"
   },
   "dependencies": {
     "@nuxtjs/bulma": "^1.2.1",
+    "axios": "^0.18.0",
+    "cookie-universal-nuxt": "^2.0.5",
     "cross-env": "^5.2.0",
+    "date-fns": "^1.29.0",
     "express": "^4.16.4",
-    "nuxt": "^2.2.0"
+    "marked": "^0.5.1",
+    "nuxt": "^2.2.0",
+    "vue-axios": "^2.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
