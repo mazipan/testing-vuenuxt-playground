@@ -2,6 +2,8 @@
 
 > 🕺 Code to show how we can easily add unit test into our Vue and Nuxt project
 
+[![Testing all apps](https://github.com/mazipan/testing-vuenuxt-playground/actions/workflows/testing.yml/badge.svg)](https://github.com/mazipan/testing-vuenuxt-playground/actions/workflows/testing.yml)
+
 ## Workspace managed by `pnpm`
 
 Install dependencies:
@@ -10,10 +12,31 @@ Install dependencies:
 $ pnpm install
 ```
 
-## Vue 2 Project (Bootstrapped w Vue-CLI)
+## Applications
 
-## Vue 3 Project (Bootstrapped w Vite)
-## Nuxt 2 Project (Bootstrapped w create-nuxt-app)
+### 🟩 Nuxt 2 Project (Bootstrapped w create-nuxt-app)
+
+Run test script:
+
+```bash
+$ pnpm run test:nuxt2
+```
+
+### 🟩 Vue 2 Project (Bootstrapped w Vue-CLI)
+
+Run test script:
+
+```bash
+$ pnpm run test:vue2
+```
+
+### 🟩 Vue 3 Project (Bootstrapped w Vite)
+
+Run test script:
+
+```bash
+$ pnpm run test:vue3
+```
 
 ------
 
