@@ -18,26 +18,28 @@
 </template>
 
 <script>
-// import { getAllPokemons } from "../api/getAllPokemons";
+import { usePokemons } from "../hooks/usePokemons";
 import HeaderSection from "../components/HeaderSection.vue";
 import FooterSection from "../components/FooterSection.vue";
 
 export default {
+  name: "Home",
   components: {
     HeaderSection,
     FooterSection,
   },
-  data() {
+  setup() {
+    const { pokemons, count, fetchData } = usePokemons();
+
     return {
-      count: 0,
-      pokemons: [],
+      pokemons,
+      count,
+      fetchData,
     };
   },
-  // async mounted() {
-  //   const pokemons = await getAllPokemons();
-  //   (this.count = pokemons.data.pokemons.count),
-  //     (this.pokemons = pokemons.data.pokemons.results);
-  // },
+  mounted() {
+    this.fetchData();
+  },
 };
 </script>
 

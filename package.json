@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "> 🕺 Code to show how we can easily add unit test into our Vue and Nuxt project",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
   "scripts": {
     "dev:nuxt2": "pnpm run dev --filter nuxt2",
     "dev:vue2": "pnpm run dev --filter vue2",
@@ -28,5 +26,13 @@
   "bugs": {
     "url": "https://github.com/mazipan/testing-vuenuxt-playground/issues"
   },
-  "homepage": "https://github.com/mazipan/testing-vuenuxt-playground#readme"
+  "homepage": "https://github.com/mazipan/testing-vuenuxt-playground#readme",
+
+  "dependencies": {},
+
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.14",
+    "tailwindcss": "^2.1.2"
+  }
 }
