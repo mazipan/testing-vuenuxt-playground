@@ -1,6 +1,6 @@
 # testing-vuenuxt-playground
 
-> 🕺 Code to show how we can easily add unit test into our Vue and Nuxt project
+🌻 Playground for setup example and get in action with Unit Test on Nuxt, Vue 2 and Vue 3
 
 [![Testing all apps](https://github.com/mazipan/testing-vuenuxt-playground/actions/workflows/testing.yml/badge.svg)](https://github.com/mazipan/testing-vuenuxt-playground/actions/workflows/testing.yml)
 
