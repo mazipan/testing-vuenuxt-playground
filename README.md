@@ -14,9 +14,19 @@ $ pnpm install
 
 ## Applications
 
+## 📸 Screenshots
+
+![Screenshot](screenshot.png)
+
 ### 🟩 Nuxt 2 Project (Bootstrapped w create-nuxt-app)
 
 Run test script:
+
+```bash
+$ pnpm run test:nuxt2
+```
+
+Run app in local:
 
 ```bash
 $ pnpm run test:nuxt2
@@ -30,9 +40,21 @@ Run test script:
 $ pnpm run test:vue2
 ```
 
+Run app in local:
+
+```bash
+$ pnpm run test:vue2
+```
+
 ### 🟩 Vue 3 Project (Bootstrapped w Vite)
 
 Run test script:
+
+```bash
+$ pnpm run test:vue3
+```
+
+Run app in local:
 
 ```bash
 $ pnpm run test:vue3

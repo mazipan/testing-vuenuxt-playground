@@ -1,78 +1,70 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        sample-project
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+    <HeaderSection />
+    <div class="wrapper">
+      <div class="item-wrapper">
+        <div v-for="pokemon in pokemons" :key="pokemon.url" class="item">
+          <div class="item-img-wrapper">
+            <img class="item-img" :src="pokemon.image" :alt="pokemon.name" />
+          </div>
+          <div class="item-content">
+            {{ pokemon.name }}
+          </div>
+        </div>
       </div>
     </div>
+    <FooterSection />
   </div>
 </template>
 
 <script>
-export default {}
+import { getAllPokemons } from '../api/getAllPokemons'
+import HeaderSection from '../components/HeaderSection'
+import FooterSection from '../components/FooterSection'
+
+export default {
+  components: {
+    HeaderSection,
+    FooterSection,
+  },
+  async asyncData() {
+    const pokemons = await getAllPokemons()
+
+    return {
+      count: pokemons.data.pokemons.count,
+      pokemons: pokemons.data.pokemons.results,
+    }
+  },
+}
 </script>
 
 <style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
 .container {
   margin: 0 auto;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.wrapper {
+  @apply mt-24 mb-4;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.item-wrapper {
+  @apply grid grid-cols-1 gap-y-5 mx-4;
 }
 
-.links {
-  padding-top: 15px;
+.item {
+  @apply flex items-center rounded-lg overflow-hidden shadow;
+}
+
+.item-img-wrapper {
+  @apply bg-gray-800;
+}
+
+.item-img {
+  @apply w-16;
+}
+
+.item-content {
+  @apply p-4 text-xl;
 }
 </style>

@@ -6,6 +6,10 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
+    "dev:nuxt2": "pnpm run dev --filter nuxt2",
+    "dev:vue2": "pnpm run dev --filter vue2",
+    "dev:vue3": "pnpm run dev --filter vue3",
+
     "test:nuxt2": "pnpm run test --filter nuxt2",
     "test:vue2": "pnpm run test --filter vue2",
     "test:vue3": "pnpm run test --filter vue3",
