@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import FooterSection from '@/components/FooterSection.vue'
+import FooterSection from '../components/FooterSection.vue'
 
 describe('FooterSection.vue', () => {
   test('is a Vue instance', () => {

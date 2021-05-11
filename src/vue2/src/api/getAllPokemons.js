@@ -16,7 +16,7 @@ const gqlQuery = `query pokemons($limit: Int, $offset: Int) {
 
 const gqlVariables = {
   limit: 10,
-  offset: 1,
+  offset: 1
 }
 
 export const getAllPokemons = async () => {
@@ -25,9 +25,9 @@ export const getAllPokemons = async () => {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       query: gqlQuery,
-      variables: gqlVariables,
+      variables: gqlVariables
     }),
-    method: 'POST',
+    method: 'POST'
   })
 
   return await res.json()

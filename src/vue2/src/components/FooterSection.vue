@@ -11,8 +11,8 @@
 
 <script>
 export default {
-	name: 'FooterSection'
-};
+  name: 'FooterSection'
+}
 </script>
 
 <style>
