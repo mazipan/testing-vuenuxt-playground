@@ -29,7 +29,7 @@ $ pnpm run test:nuxt2
 Run app in local:
 
 ```bash
-$ pnpm run test:nuxt2
+$ pnpm run dev:nuxt2
 ```
 
 ### 🟩 Vue 2 Project (Bootstrapped w Vue-CLI)
@@ -43,7 +43,7 @@ $ pnpm run test:vue2
 Run app in local:
 
 ```bash
-$ pnpm run test:vue2
+$ pnpm run dev:vue2
 ```
 
 ### 🟩 Vue 3 Project (Bootstrapped w Vite)
@@ -57,7 +57,7 @@ $ pnpm run test:vue3
 Run app in local:
 
 ```bash
-$ pnpm run test:vue3
+$ pnpm run dev:vue3
 ```
 
 ------
